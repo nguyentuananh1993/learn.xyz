@@ -27,8 +27,13 @@ To watch some training videos, visit http://www.youtube.com/user/c9ide
     learn.xyz
     
 #Members
+
 Thangluu - Thang
+
 xuhaohanoi-Vu Van Trung
+
 phuongbk-Phuong
+
 linhnguwa-Nguyen Manh Linh
+
 quynv - Quy
