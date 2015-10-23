@@ -16,7 +16,11 @@
     <%= link_to "register", new_user_registration_path %>
   <% end %>
   
-<%= yield %>
+  <% flash.each do |type, message| %>
+    <strong><%= message %></strong>
+  <% end %>
+  
+  <%= yield %>
 
 </body>
 </html>
