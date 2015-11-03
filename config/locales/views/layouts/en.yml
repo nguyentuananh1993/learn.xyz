@@ -1,0 +1,10 @@
+en:
+  layouts:
+    header:
+      logo: "LearnXYZ"
+      home: "Home"
+      profile: "Profile"
+      setting: "Setting"
+      logout: "Logout"
+      signup: "Sign Up"
+      signin: "Sign in"

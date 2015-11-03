@@ -1,0 +1,6 @@
+en:
+  static_pages:
+    home:
+      title: "Home Page"
+      welcome: "Welcome to the LearnXYZ Page"
+      sign-up_btn: "Sign up now!"
