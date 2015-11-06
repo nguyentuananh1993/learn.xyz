@@ -1,0 +1,8 @@
+en:
+  users:
+    index:
+      title: "All Users"
+    show:
+      title: "User"
+      name: "Name: %{name}"
+      email: "Email: %{email}"
