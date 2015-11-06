@@ -19,12 +19,12 @@
         <div class= "field form-group">
           <%= f.label :gender %> <br/>
           <%= f.select :gender, options_for_select(["Male", "Female"], "Male"),
-            class: "form-control" %>
+            {}, {class: "form-control"} %>
         </div>
       
         <div class= "field form-group">
           <%= f.label :age %> <br/>
-          <%= f.select :age, options_for_select((10..99).to_a, 25),  class: "form-control"  %>
+          <%= f.select :age, options_for_select((10..99).to_a, 25),  {}, {class: "form-control"}  %>
         </div>
         
       <div class="field form-group">
