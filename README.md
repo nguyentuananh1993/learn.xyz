@@ -28,12 +28,16 @@ To watch some training videos, visit http://www.youtube.com/user/c9ide
     
 #Members
 
-Thangluu - Thang
+Thangluu - Luu Duc Thang
 
 xuhaohanoi-Vu Van Trung
 
-phuongbk-Phuong
+phuongbk- Nguyen Duc Phuong
 
 linhnguwa-Nguyen Manh Linh
 
-quynv - Quy
+quynv - Nguyen Van Quy
+
+sontdhust - Tran Duc Son
+
+nguyentuananh1993 - Nguyen Tuan Anh
