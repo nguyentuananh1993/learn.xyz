@@ -6,3 +6,7 @@ en:
       title: "User"
       name: "Name: %{name}"
       email: "Email: %{email}"
+      age: "Age: %{age}"
+      gender: "Gender: %{gender}"
+      words: "Number of words: %{words}"
+      deadline: "Deadline: %{deadline}"

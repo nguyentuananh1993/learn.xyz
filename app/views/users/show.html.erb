@@ -1,22 +1,36 @@
 <% provide :title, @user.name %>
 <div class="row">
   <div class="center jumbotron">
-    <h1><%= t ".title" %></h1>
     <aside>
-      <p>
-        <%= t ".name", name: @user.name %>
-      </p>
-      <p>
-        <%= t ".email", email: @user.email %>
-      </p>
-       <p>
-        <%= t ".age", email: @user.age %>
-      </p>
-       <p>
-        <%= t ".gender", email: @user.gender %>
-      </p>
+      <div class="user-info">
+        <h3 class="bg-primary" >Profile:</h3>
+        <p  class="text-info">
+          <%= t ".name", name: @user.name %>
+        </p>
+        <p  class="text-info">
+          <%= t ".email", email: @user.email %>
+        </p>
+         <p  class="text-info">
+          <%= t ".age", age: @user.age %>
+        </p>
+         <p  class="text-info">
+          <%= t ".gender", gender: @user.gender %>
+        </p>
+      </div>
       
       <hr>
+      <div class="goals">
+        <h3 class="bg-danger" >Goals:</h3>
+        <% @user.goals.each do |goal| %>
+          <div class="goal">
+            <%= t ".words", words: goal.words %> <br>
+            <%= t ".deadline", deadline: goal.deadline %>
+          </div>
+            
+        <% end %>
+        <p><%= link_to  "new goal", [:new, :goal], class: "btn btn-primary" %></p>
+      </div>
+      
       <% if @is_me %>
     <% @user.friends.each_with_index do |friend, i| %>
         <% if friend.user_id == @user.id %>
@@ -66,5 +80,6 @@
     <% end %>
       <%end %>
     </aside>
+    
   </div>
 </div>
