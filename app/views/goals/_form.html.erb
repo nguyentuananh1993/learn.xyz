@@ -1,0 +1,12 @@
+<%= form_for @goal do |f| %>
+  <%= render "shared/error_messages", object: f.object %>
+
+  <%= f.label :words, "Number of words" %>
+  <%= f.number_field :words, class: "form-control" %>
+
+  <%= f.label :deadline %>
+  <%= f.date_field :deadline, class: "form-control" %>
+
+
+  <%= f.submit t(".save"), class: "btn btn-primary" %>
+<% end %>

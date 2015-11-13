@@ -10,4 +10,6 @@ Rails.application.routes.draw do
   resources :friends, only: [:create, :destroy, :update]
   resources :user_logs
   
+  resources :goals
+  
 end

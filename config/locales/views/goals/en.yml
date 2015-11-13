@@ -1,0 +1,6 @@
+en:
+  goals:
+    new:
+      title: "New Goal"
+    form:
+      save: "Create"
