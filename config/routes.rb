@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :learning_logs
+  resources :learning_logs
   root "static_pages#home"
 
   devise_for :users
