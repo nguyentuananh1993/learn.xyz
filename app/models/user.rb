@@ -7,6 +7,7 @@ class User < ActiveRecord::Base
   has_many :user_logs
   has_many :goal_of_readings
   has_many :goals
+  has_many :learning_logs
   
   def status_with friend_id
     if friend = Friend.where(user_id: self.id, friend_id: friend_id).try(:first)

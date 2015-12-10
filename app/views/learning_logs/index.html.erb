@@ -1,0 +1,34 @@
+<%= javascript_include_tag "//www.google.com/jsapi", "chartkick"%>
+
+<%= column_chart @groups_for_chart %>
+<%= line_chart @groups_for_chart %>
+
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Learning Logs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Learned word</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @learning_logs.each do |learning_log| %>
+      <tr>
+        <td><%= learning_log.learned_word %></td>
+        <td><%= learning_log.user_id %></td>
+        <td><%= link_to 'Show', learning_log %></td>
+        <td><%= link_to 'Edit', edit_learning_log_path(learning_log) %></td>
+        <td><%= link_to 'Destroy', learning_log, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Learning log', new_learning_log_path %>

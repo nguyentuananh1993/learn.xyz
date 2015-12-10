@@ -1,0 +1,25 @@
+<%= form_for(@learning_log) do |f| %>
+  <% if @learning_log.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@learning_log.errors.count, "error") %> prohibited this learning_log from being saved:</h2>
+
+      <ul>
+      <% @learning_log.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :learned_word %><br>
+    <%= f.text_field :learned_word %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.number_field :user_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

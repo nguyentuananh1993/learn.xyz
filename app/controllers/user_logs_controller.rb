@@ -4,13 +4,7 @@ class UserLogsController < ApplicationController
   # GET /user_logs
   # GET /user_logs.json
   def index
-    # @user_logs = UserLog.all
-    @user_logs = current_user.user_logs
-    
-    @word_learning_logs  = current_user.user_logs.all
-    
-    @groups_for_chart = @word_learning_logs.to_a.group_by{|x| x.created_at.beginning_of_day}
-    .map{|group| [group[0].strftime("%F"), group[1].map(&:learned_word).sum]}
+    @user_logs = UserLog.all
   end
 
   # GET /user_logs/1
