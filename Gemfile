@@ -12,7 +12,7 @@ gem "jbuilder", "~> 2.0"
 
 gem "devise"
 gem "chartkick"
-gem "bootstrap-sass", "~> 3.3.5"
+# gem "bootstrap-sass", "~> 3.3.5"
 
 gem "sdoc", "~> 0.4.0", group: :doc
 
