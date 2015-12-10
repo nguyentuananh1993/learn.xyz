@@ -7,6 +7,9 @@
           <h1><a href="">learn.xyz</a> by A's Team</h1>
           <nav id="nav">
             <ul>
+              <% if user_signed_in? %>
+              <li><%= link_to "Profile", user_path(current_user) %></li>
+            <% end %>
               <li><a href="#">Home</a></li>
               <li><%= link_to 'Contact', 'contact' %></li>
               <% if user_signed_in? %>
@@ -21,7 +24,7 @@
       <!-- Banner -->
         <section id="banner">
           <h2>learn.xyz</h2>
-          <p>A free web application designed to help Japanese language students of all levels learn by playing kanji quiz.</p>
+          <p>A free web designed to help Japanese language students of all levels learn by playing kanji quiz.</p>
            <% if !user_signed_in? %>
           <ul class="actions">
             <li><%= link_to t(".sign-up_btn"), new_user_registration_path, class: "button special" %></li>
