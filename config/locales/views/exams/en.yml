@@ -1,0 +1,36 @@
+
+en:
+  exams:
+    edit:
+      title: "Exam"
+      time_left: "Time left:"
+    show:
+      title: "Exam"
+      time_left: "Time left:"
+    form:
+      submit: "Submit"
+    answer_form:
+      correct_answer: "Answer correct"
+    new:
+      title: "New exam"
+      submit: "Submit"
+      create_exam: "Create New Exam"
+      all_exams: "All Examinations"
+      search: "Filter"
+    exam:
+      start: "Start"
+      view: "View"
+      score: "Score: %{correct}/%{all}"
+    timeout: "Timeout!!!"
+    search_form:
+      submit: "Search"
+      category: "Category"
+      score: "Score"
+      started_at: "Started from"
+      to: "to"
+      score_from: "Score from"
+      state: "State"
+      yes: "Yes"
+      no: "No"
+      all: "All"
+      finished: "Finished"
