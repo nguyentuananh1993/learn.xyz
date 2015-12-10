@@ -16,6 +16,16 @@ gem "bootstrap-sass", "~> 3.3.5"
 
 gem "sdoc", "~> 0.4.0", group: :doc
 
+# Authorization
+gem "cancancan"
+
+#Use for search/filter
+gem "ransack"
+
+# Create data
+gem "ffaker"
+gem "factory_girl_rails"
+
 group :development, :test do
   gem "byebug"
   gem "web-console", "~> 2.0"

@@ -1,0 +1,20 @@
+<% provide :title, "New Exam" %>
+<h1>Create exam</h1>
+<div class="row form-inline center">
+  <%= form_for @exam do |f| %>
+    <%= f.select :category_id,
+      options_from_collection_for_select(@categories, :id, :name), {},
+        {class: "form-control"} %>
+    <%= f.submit "Submit", class: "btn btn-primary btn-fix" %>
+  <% end %>
+</div>
+<br />
+<br />
+<div class="row">
+  <h1><%= t ".search" %></h1>
+  <%= render "search_form" %>
+</div>
+<div class="row">
+  <h1><%= "All Exams" %></h1>
+  <%= render @exams %>
+</div>
