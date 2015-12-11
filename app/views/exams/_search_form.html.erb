@@ -1,38 +1,41 @@
 <%= search_form_for @search, url: root_url,
   html: {method: :get} do |f| %>
-  <div class="field col-md-6">
-    <%= f.label :category_name_cont, t(".category") %>
-    <%= f.text_field :category_name_cont, class: "form-control" %>
-  </div>
-
-  <div class="field col-md-6">
-    <%= f.label :finished_true, t(".finished") %>
-    <%= f.select :finished_true, [[t(".yes"), 1], [t(".no"), 0]],
+  <div class="row uniform 50%"> 
+    <div class="8u 12u(mobilep)">
+      <%= f.text_field :category_name_cont, class: "form-control", :placeholder => "Category Name" %>
+    </div>
+  </div>  
+  <div class="row uniform 50%"> 
+    <div class="8u 12u(mobilep)">
+       <%= f.select :finished_true, [[t(".yes"), 1], [t(".no"), 0]],
       {include_blank: t(".all"),
         selected: params[:q] ? params[:q][:published_true] : ""},
-      class: "form-control" %>
-  </div>
-
-  <div class="field col-md-6">
-    <%= f.label :correct_number_gteq, t(".score_from") %>
-    <%= f.text_field :correct_number_gteq, class: "form-control" %>
-  </div>
-
-  <div class="field col-md-6">
-    <%= f.label :correct_number_lteq, t(".to") %>
-    <%= f.text_field :correct_number_lteq, class: "form-control" %>
-  </div>
-
-  <div class="field col-md-6">
-    <%= f.label :started_at_gteq, t(".started_at") %>
-    <%= f.date_field :created_at_gteq, class: "form-control " %>
-  </div>
-  <div class="field col-md-6">
-    <%= f.label :started_at_lteq, t(".to") %>
-    <%= f.date_field :created_at_lteq, class: "form-control" %>
-  </div>
-
-  <div class="actions col-md-1">
-    <%= f.submit "Submit", class: "btn btn-primary" %>
-  </div>
+      class: "form-control", :placeholder => "Finished" %>
+    </div>
+  </div>  
+  <div class="row uniform 50%"> 
+    <div class="8u 12u(mobilep)">
+    <%= f.text_field :correct_number_gteq, class: "form-control", :placeholder => "Score from" %>
+    </div>
+  </div>  
+  <div class="row uniform 50%"> 
+    <div class="8u 12u(mobilep)">
+      <%= f.text_field :correct_number_lteq, class: "form-control", :placeholder => "Score to" %>
+    </div>
+  </div>  
+  <div class="row uniform 50%"> 
+    <div class="8u 12u(mobilep)">
+      <%= f.date_field :created_at_gteq, class: "form-control ", :placeholder => "Create at" %>
+    </div>
+  </div>  
+  <div class="row uniform 50%"> 
+    <div class="8u 12u(mobilep)">
+      <%= f.date_field :created_at_lteq, class: "form-control", :placeholder => "Started at" %>
+    </div>
+  </div>  
+  <div class="row uniform 50%"> 
+    <div class="8u 12u(mobilep)">
+      <%= f.submit "Submit", class: "btn btn-primary" %>
+    </div>
+  </div>  
 <% end %>

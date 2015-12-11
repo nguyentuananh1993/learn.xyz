@@ -1,37 +1,58 @@
 <% provide :title, @user.name %>
-<div class="row">
-  <div class="center jumbotron">
-    <aside>
-      <div class="user-info">
-        <h3 class="bg-primary" >Profile:</h3>
-        <p  class="text-info">
-          <%= t ".name", name: @user.name %>
-        </p>
-        <p  class="text-info">
-          <%= t ".email", email: @user.email %>
-        </p>
-         <p  class="text-info">
-          <%= t ".age", age: @user.age %>
-        </p>
-         <p  class="text-info">
-          <%= t ".gender", gender: @user.gender %>
-        </p>
+<section id="main" class="container">
+  <header>
+    <h2>User Profile</h2>
+    <p>Just something about you.</p>
+  </header>
+  <div class="row">
+    <div class="8u">
+      <section class="box">
+        <h3>Profile:</h3>
+        <p><%= t ".name", name: @user.name %></p>
+        <p><%= t ".email", email: @user.email %></p>
+        <p><%= t ".age", age: @user.age %></p>
+        <p><%= t ".gender", gender: @user.gender %></p>
+      </section>
+    </div>
+      <div class="4u">
+        <%= image_tag("avatar.png", :alt=>"avatar") %>
       </div>
-      
-      <hr>
-      <div class="goals">
-        <h3 class="bg-danger" >Goals:</h3>
-        <% @user.goals.each do |goal| %>
-          <div class="goal">
-            <%= t ".words", words: goal.words %> <br>
-            <%= t ".deadline", deadline: goal.deadline %>
-          </div>
-            
-        <% end %>
+  </div>
+  
+  <div class="row">
+    <div class="12u">
+      <section class="box">
+        <h3>Goals:</h3>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>No.</th>
+                <th>Number of Words</th>
+                <th>Deadline</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% @user.goals.each do |goal| %>
+                <tr>
+                  <td></td>
+                  <td><%= goal.words %></td>
+                  <td><%= goal.deadline %></td>
+                </tr>
+              <% end %>
+            </tbody>
+           
+          </table>
+        </div>
         <p><%= link_to  "new goal", [:new, :goal], class: "btn btn-primary" %></p>
-      </div>
-      
-      <% if @is_me %>
+      </section>
+    </div>
+  </div>
+  <div class="row">
+    <div class="12u">
+      <section class="box">
+        <h3>Friend:</h3>
+              <% if @is_me %>
     <% @user.friends.each_with_index do |friend, i| %>
         <% if friend.user_id == @user.id %>
         <h4>
@@ -79,7 +100,10 @@
             <% end %>
     <% end %>
       <%end %>
-    </aside>
-    
+      </section>
+    </div>
   </div>
-</div>
+
+
+
+</section>
